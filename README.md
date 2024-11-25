@@ -41,7 +41,10 @@ A Discord bot that displays the current price of the **Ronin (RON)** (or your pr
    - Customize your bot’s name and upload an app icon (e.g., an image of the **RON** token).
    - Go to the **Bot** tab and click **Add Bot**.
    - Under **Token**, click **Reset Token**, confirm the action, and copy the token.
-   - Paste the token into the `.env` file under `RONTOKEN`.
+   - Paste the token into the `pricebot.env` file like this:
+     ```plaintext
+     RONTOKEN=your_discord_bot_token_here
+     ```
 
 ### Installation
 1. Navigate to the **Installation** tab in the Developer Portal.
@@ -62,7 +65,6 @@ By default, the bot monitors **Ronin (RON)**. To monitor a different cryptocurre
     https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=ronin
     https://api.coingecko.com/api/v3/coins/markets?vs_currency=php&ids=ronin
     ```
-4. Update the `get_prices` function in `RONBot.py` to use the new token id.
 
 ## Directory Structure
 ```plaintext
@@ -74,6 +76,7 @@ keys
 This directory structure supports having multiple tokens in the `pricebot.env` file. You can safely store token details for different cryptocurrencies in this file. Since the `keys` directory is located outside of the repository, the `pricebot.env` file will not be included in any commits, ensuring that sensitive information like bot tokens remains secure.
 
 ## Directory Structure (.env within project directory)
+**IMPORTANT**: Make sure to include `pricebot.env` in your `.gitignore` file to prevent it from being committed to the repository
 ```plaintext
 discord-crypto-price-bot
 └── RONBot.py
@@ -91,14 +94,6 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 load_dotenv(os.path.join(script_dir, "pricebot.env"))
 ```
 This will load the `pricebot.env` file directly from the project script directory.
-
-**Important**:
-Make sure to include `pricebot.env` in your .gitignore file to prevent it from being committed to the repository:
-### .gitignore
-```plaintext
-pricebot.env
-```
-This will ensure that sensitive information is never pushed to the repository.
 
 ## Notes
 - Ensure your bot token is kept secure. Never share it publicly.
