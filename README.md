@@ -87,6 +87,7 @@ load_dotenv(os.path.join(script_dir, "..", keys_folder, "pricebot.env"))
 ```
 To something like this:
 ```plaintext
+script_dir = os.path.dirname(os.path.abspath(__file__))
 load_dotenv(os.path.join(script_dir, "pricebot.env"))
 ```
 This will load the `pricebot.env` file directly from the project script directory.
