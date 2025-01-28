@@ -83,8 +83,8 @@ To ensure 24/7 deployment, consider hosting this bot on a cloud server, such as 
 By default, the bot monitors **Ronin (RON)** and in $ (USD) and ₱ (PHP). To monitor a different cryptocurrency and fiat currency:
 1. Visit [CoinGecko](https://www.coingecko.com/).
 2. Search for the desired cryptocurrency and note its **id** from the URL. For example, the id for Ethereum is `ethereum`:  
-   URL: `https://www.coingecko.com/en/coins/jupiter`  
-   **id**: `jupiter`
+   URL: `https://www.coingecko.com/en/coins/ethereum`  
+   **id**: `ethereum`
 3. Replace `CRYPTO` in the `.env` file:
     ```plaintext
     CRYPTO=ethereum
