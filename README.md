@@ -21,6 +21,8 @@ A Discord bot that displays the current price of your preferred cryptocurrency t
 2. Create a `.env` file in that directory with the following content:
     ```
     CRYPTO=your_crypto_token_to_monitor_here
+    FIAT1=your_desired_fiat_currency
+    FIAT2=your_other_desired_fiat_currency
     TOKEN=your_discord_bot_token_here
     ```
 
