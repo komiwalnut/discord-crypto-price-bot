@@ -82,7 +82,7 @@ To ensure 24/7 deployment, consider hosting this bot on a cloud server, such as 
 3. Use the provided install link to add the bot to your Discord server.
 
 ### How to Monitor Other Tokens and fiat currency
-By default, the bot monitors **Ronin (RON)** and in $ (USD) and ₱ (PHP). To monitor a different cryptocurrency and fiat currency:
+To monitor a different cryptocurrency and fiat currency:
 1. Visit [CoinGecko](https://www.coingecko.com/).
 2. Search for the desired cryptocurrency and note its **id** from the URL. For example, the id for Ethereum is `ethereum`:  
    URL: `https://www.coingecko.com/en/coins/ethereum`  
